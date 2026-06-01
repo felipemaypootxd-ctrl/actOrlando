@@ -94,6 +94,7 @@
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(119, 22);
             this.txtPrecio.TabIndex = 3;
+            this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
             // 
             // btnGuardar
             // 
@@ -129,7 +130,7 @@
             // 
             this.btnSeleccionarImagen.Location = new System.Drawing.Point(341, 52);
             this.btnSeleccionarImagen.Name = "btnSeleccionarImagen";
-            this.btnSeleccionarImagen.Size = new System.Drawing.Size(89, 26);
+            this.btnSeleccionarImagen.Size = new System.Drawing.Size(102, 26);
             this.btnSeleccionarImagen.TabIndex = 7;
             this.btnSeleccionarImagen.Text = "Selecciona";
             this.btnSeleccionarImagen.UseVisualStyleBackColor = true;

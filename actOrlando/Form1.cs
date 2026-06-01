@@ -62,7 +62,7 @@ namespace actOrlando
                 File.AppendAllLines(rutaArchivoTexto, new string[] { nuevaLinea });
 
 
-                MessageBox.Show("¡Producto registrado con éxito de forma local!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("¡Producto registrado", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                
                 txtNombre.Clear();
@@ -102,5 +102,17 @@ namespace actOrlando
                 }
             }
             }
+
+        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else
+            {
+                e.Handled= false;
+            }
+        }
     }
 }
